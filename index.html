@@ -1,8 +1,25 @@
 <html>
-  <head>
-    <title>My first page</title>
-  <head>
-  <body>
-    first page
-  </body>
+<head>
+	<script src="js/vue.global.js"></script>
+	<title>slowliest</title>
+</head>
+
+<body>
+	<div id="app">{{ message }}</div>
+</body>
+
+
+<script>
+const { createApp, ref } = Vue
+
+  createApp({
+    setup() {
+      const message = ref('Hello slowliest!')
+      return {
+        message
+      }
+    }
+  }).mount('#app')
+</script>
+
 </html>
